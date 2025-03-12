@@ -1,8 +1,10 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import {Link } from "react-router-dom"
 import { context } from './App'
+import './Nav.css'
 function Nav() {
     const {cartItems,setCartItems}=useContext(context)
+    const[bname,setbname]=useState('')
   return (
     <div>
       <nav className="bg-gray-800">
@@ -37,7 +39,7 @@ function Nav() {
         </div>
       </div>
       <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-               
+              
       <Link  to="/Cart" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Cart</Link>
         
         <div className="relative ml-3">

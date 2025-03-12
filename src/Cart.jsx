@@ -14,6 +14,7 @@ function Cart() {
             <img class="w-45 h-45" src={book.image}  alt={book.title} />
             <div class="px-6 py-4">
               <div class="font-bold text-xl mb-2">{book.title}</div>
+              <h4>price:{book.price}</h4>
               <button class="bg-red-500  text-white font-bold py-2 px-4 rounded-full cursor-pointer" onClick={()=>setCartItems(cartItems.filter((val,i)=>val.id!=book.id))}>
   Remove
 </button>
@@ -21,7 +22,7 @@ function Cart() {
             </div>
           ))
         ) : (
-          <h4>No books found</h4>
+          <h4>No Books In Cart</h4>
         )}
      
     </div>
